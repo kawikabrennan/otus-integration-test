@@ -1,0 +1,126 @@
+{
+    "data": {
+        "AssessmentSearch": [
+            {
+                "assessment_id": 264428,
+                "assessment_title": "Behavior - Social Development 3-5",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 315330,
+                "assessment_title": "Rubric - 6/4/20",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 315503,
+                "assessment_title": "Rubric - 6/18/20",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 92515,
+                "assessment_title": "PE 1.1 Locomotor - Motor Skills & Movement Patterns ",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 228012,
+                "assessment_title": "PE Behavior Scale 3-5 (all 4 targets)",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 94095,
+                "assessment_title": "PE 4.1 Throwing - Motor Skills & Movement Patterns ",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 227921,
+                "assessment_title": "PE Behavior Scale K-2 (all 4 targets)",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 246412,
+                "assessment_title": "PE Behavior Scale 3-5- 3 targets",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 202089,
+                "assessment_title": "PE 3.1 Throwing - Motor Skills & Movement Patterns ",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 201423,
+                "assessment_title": "PE 5.1 Throwing - Motor Skills & Movement Patterns",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 217785,
+                "assessment_title": "PE 4.1 Locomotor - Motor Skills & Movement Patterns",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 97105,
+                "assessment_title": "PE K.1 Locomotor - Motor Skills & Movement Patterns ",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 202533,
+                "assessment_title": "PE 2.1 Throwing - Motor Skills & Movement Patterns ",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 217875,
+                "assessment_title": "PE 3.1 Locomotor - Motor Skills & Movement Patterns",
+                "assessment_type": 3,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            },
+            {
+                "assessment_id": 70208,
+                "assessment_title": "Simple - 6/18/20",
+                "assessment_type": 2,
+                "district_id": 85623,
+                "grading_scale_id": 751,
+                "__typename": "AssessmentSearch"
+            }
+        ]
+    }
+}
