@@ -61,7 +61,17 @@ def build_student_class_schema(target_json: dict) -> dict:
 
 def build_assessment_search_response_schema(target_json: dict) -> dict:
     schema = {
-
+        "type": "object",
+        "properties": {
+            "data": {
+                "type": "object",
+                "properties": {
+                    "AssessmentSearch": {
+                        "type": "array"
+                    }
+                }
+            },
+        }
     }
 
     return schema
