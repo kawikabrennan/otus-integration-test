@@ -1,16 +1,7 @@
 import unittest
-import json
+from helpers import get_json_object
 from jsonschema import validate
 from schemas import build_student_class_schema
-
-
-def get_json_object(file_path: str) -> dict:
-    with open(file_path) as file:
-        try:
-            test_json = json.load(file)
-        except json.decoder.JSONDecodeError:
-            test_json = {}
-    return test_json
 
 
 class StudentClassResponse(unittest.TestCase):
