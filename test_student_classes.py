@@ -12,5 +12,5 @@ class StudentClassResponse(unittest.TestCase):
 
     def test_json_data_validation(self):
         """Verify JSON data against a schema"""
-        schema = build_student_class_schema(self.student_json)
+        schema = build_student_class_schema()
         validate(instance=self.student_json, schema=schema)

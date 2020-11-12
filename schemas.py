@@ -1,7 +1,7 @@
 from schema_definitions import ASSESSMENT, CLASSES, STUDENT
 
 
-def build_student_class_schema(target_json: dict) -> dict:
+def build_student_class_schema() -> dict:
     schema = {
         "definitions": {
             "student": STUDENT,
@@ -36,7 +36,7 @@ def build_student_class_schema(target_json: dict) -> dict:
     return schema
 
 
-def build_assessment_search_response_schema(target_json: dict) -> dict:
+def build_assessment_search_response_schema() -> dict:
     schema = {
         "definitions": {
             "assessment": ASSESSMENT
