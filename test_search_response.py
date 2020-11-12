@@ -36,12 +36,31 @@ class RainyDaySearchResponse(unittest.TestCase):
             "fixtures/search_response.json")
 
     def test_json_assessment_title_length_restriction(self):
-        """Verify data against the rainy day schema"""
+        """Altering schema to show edge case testing.
+        Update custom schema to expect untouched response data to have smaller title length.
+        """
         error = False
 
         schema = ASSESSMENT_SEARCH_RESPONSE_SCHEMA
         schema["definitions"]["assessment"]["properties"]["assessment_title"] = {
             "type": "string", "maxLength": 10
+        }
+        try:
+            validate(instance=self.response_json, schema=schema)
+        except ValidationError:
+            error = True
+
+        self.assertTrue(error)
+
+    def test_json_assessment_type_change(self):
+        """Altering schema to show edge case testing.
+        Update custom schema to expect untouched response data to have different type.
+        """
+        error = False
+
+        schema = ASSESSMENT_SEARCH_RESPONSE_SCHEMA
+        schema["definitions"]["assessment"]["properties"]["assessment_type"] = {
+            "type": "string"
         }
         try:
             validate(instance=self.response_json, schema=schema)
