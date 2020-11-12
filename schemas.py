@@ -13,6 +13,7 @@ def build_student_class_schema(target_json: dict) -> dict:
                             "items": {"$ref": "#/definitions/studentClasses"}
                         }
                 },
+                "required": ["first", "last", "email", "studentClasses"],
                 "additionalProperties": False,
             },
             "studentClasses": {
@@ -26,6 +27,7 @@ def build_student_class_schema(target_json: dict) -> dict:
                             "maximum": 4,
                         }
                 },
+                "required": ["id", "grade"],
                 "additionalProperties": False,
             },
         },
@@ -47,9 +49,11 @@ def build_student_class_schema(target_json: dict) -> dict:
                     "7": {"type": "string"},
                     "8": {"type": "string"},
                 },
+                "required": ["1", "2", "3", "4", "5", "6", "7", "8"],
                 "additionalProperties": False,
             }
         },
+        "required": ["students", "classes"],
         "additionalProperties": False,
     }
 
