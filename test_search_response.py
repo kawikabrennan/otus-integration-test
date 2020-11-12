@@ -1,4 +1,5 @@
 import unittest
+import copy
 from helpers import get_json_object
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
@@ -35,18 +36,21 @@ class RainyDaySearchResponse(unittest.TestCase):
         cls.response_json = get_json_object(
             "fixtures/search_response.json")
 
+    def setUp(self):
+        self.schema = copy.deepcopy(ASSESSMENT_SEARCH_RESPONSE_SCHEMA)
+
     def test_json_assessment_title_length_restriction(self):
         """Altering schema to show edge case testing.
         Update custom schema to expect untouched response data to have smaller title length.
         """
         error = False
 
-        schema = ASSESSMENT_SEARCH_RESPONSE_SCHEMA
-        schema["definitions"]["assessment"]["properties"]["assessment_title"] = {
+        # schema = copy.deepcopy(ASSESSMENT_SEARCH_RESPONSE_SCHEMA)
+        self.schema["definitions"]["assessment"]["properties"]["assessment_title"] = {
             "type": "string", "maxLength": 10
         }
         try:
-            validate(instance=self.response_json, schema=schema)
+            validate(instance=self.response_json, schema=self.schema)
         except ValidationError:
             error = True
 
@@ -58,12 +62,45 @@ class RainyDaySearchResponse(unittest.TestCase):
         """
         error = False
 
-        schema = ASSESSMENT_SEARCH_RESPONSE_SCHEMA
-        schema["definitions"]["assessment"]["properties"]["assessment_type"] = {
+        # schema = ASSESSMENT_SEARCH_RESPONSE_SCHEMA
+        self.schema["definitions"]["assessment"]["properties"]["assessment_type"] = {
             "type": "string"
         }
         try:
-            validate(instance=self.response_json, schema=schema)
+            validate(instance=self.response_json, schema=self.schema)
+        except ValidationError:
+            error = True
+
+        self.assertTrue(error)
+
+    def test_json_district_id_type(self):
+        """Altering schema to show edge case testing.
+        Update custom schema to expect untouched response data to be a string.
+        """
+        error = False
+
+        # schema = ASSESSMENT_SEARCH_RESPONSE_SCHEMA
+        self.schema["definitions"]["assessment"]["properties"]["district_id"] = {
+            "type": "string"
+        }
+        try:
+            validate(instance=self.response_json, schema=self.schema)
+        except ValidationError:
+            error = True
+
+        self.assertTrue(error)
+
+    def test_json_district_id_maximum(self):
+        """Altering schema to show edge case testing.
+        Update custom schema to expect untouched response data to be a maxium of 1.
+        """
+        error = False
+
+        self.schema["definitions"]["assessment"]["properties"]["district_id"] = {
+            "type": "number", "maximum": 1
+        }
+        try:
+            validate(instance=self.response_json, schema=self.schema)
         except ValidationError:
             error = True
 
