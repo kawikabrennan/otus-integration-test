@@ -61,13 +61,36 @@ def build_student_class_schema(target_json: dict) -> dict:
 
 def build_assessment_search_response_schema(target_json: dict) -> dict:
     schema = {
+        "definitions": {
+            "assessment": {
+                "type": "object",
+                "properties": {
+                        "assessment_id": {"type": "number", "multiple": 1},
+                        "assessment_title": {"type": "string"},
+                        "assessment_type": {"type": "number", "multiple": 1},
+                        "district_id": {"type": "number", "multiple": 1},
+                        "grading_scale_id": {"type": "number", "multiple": 1},
+                        "__typename": {"const": "AssessmentSearch"}
+                },
+                "required": [
+                    "assessment_id",
+                    "assessment_title",
+                    "assessment_type",
+                    "district_id",
+                    "grading_scale_id",
+                    "__typename"
+                ],
+                "additionalProperties": False,
+            },
+        },
         "type": "object",
         "properties": {
             "data": {
                 "type": "object",
                 "properties": {
                     "AssessmentSearch": {
-                        "type": "array"
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/assessment"}
                     }
                 }
             },
