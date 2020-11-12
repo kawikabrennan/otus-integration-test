@@ -1,7 +1,7 @@
 import unittest
 from helpers import get_json_object
 from jsonschema import validate
-from schemas import build_student_class_schema
+from schemas import STUDENT_CLASS_SCHEMA
 
 
 class StudentClassResponse(unittest.TestCase):
@@ -12,5 +12,5 @@ class StudentClassResponse(unittest.TestCase):
 
     def test_json_data_validation(self):
         """Verify JSON data against a schema"""
-        schema = build_student_class_schema()
+        schema = STUDENT_CLASS_SCHEMA
         validate(instance=self.student_json, schema=schema)

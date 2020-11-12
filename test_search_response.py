@@ -1,7 +1,7 @@
 import unittest
 from helpers import get_json_object
 from jsonschema import validate
-from schemas import build_assessment_search_response_schema
+from schemas import ASSESSMENT_SEARCH_RESPONSE_SCHEMA
 from schema_definitions import ASSESSMENT
 
 
@@ -13,7 +13,7 @@ class AssessmentSearchResponse(unittest.TestCase):
 
     def test_json_data_validation(self):
         """Verify JSON data against a schema"""
-        schema = build_assessment_search_response_schema()
+        schema = ASSESSMENT_SEARCH_RESPONSE_SCHEMA
         validate(instance=self.response_json, schema=schema)
 
     def test_json_assessment_id_202089(self):
