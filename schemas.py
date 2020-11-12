@@ -36,8 +36,19 @@ def build_student_class_schema(target_json: dict) -> dict:
                 "items": {"$ref": "#/definitions/student"}
             },
             "classes": {
-                "type": "object"
-            },
+                "type": "object",
+                "properties": {
+                    "1": {"type": "string"},
+                    "2": {"type": "string"},
+                    "3": {"type": "string"},
+                    "4": {"type": "string"},
+                    "5": {"type": "string"},
+                    "6": {"type": "string"},
+                    "7": {"type": "string"},
+                    "8": {"type": "string"},
+                },
+                "additionalProperties": False,
+            }
         },
         "additionalProperties": False,
     }
